@@ -8,7 +8,7 @@ Sensor::Sensor (int pin, int max){
     _value = 0;
 }
 
-virtual Sensor::~Sensor (){
+Sensor::~Sensor (){
 
 }
 
@@ -21,8 +21,8 @@ void Sensor::reload(){
 }
 
 bool Sensor::sreload(){
-  this.reload();
-  return this.state();
+  this -> reload();
+  return this -> state();
 }
 
 bool Sensor::state(){

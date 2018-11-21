@@ -15,5 +15,5 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  s1.ereload();
+  s1.sreload();
 }

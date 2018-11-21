@@ -14,7 +14,7 @@ public:
   Sensor (int pin, int max);
   int value();
   void reload();
-  bool ereload();
+  bool sreload();
   bool state();
   virtual ~Sensor ();
 };

@@ -16,4 +16,5 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   s1.sreload();
+  Serial.println(s1.value());
 }

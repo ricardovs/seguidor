@@ -17,5 +17,6 @@ public:
   bool sreload();
   bool state();
   ~Sensor ();
+  void printValue();
 };
 #endif

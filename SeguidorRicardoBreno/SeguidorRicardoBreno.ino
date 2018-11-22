@@ -1,13 +1,9 @@
-#define pS1 A1
-#define pS2 A2
-#define pS3 A3
-#define pS4 A4
-#define pS5 A5
 #include "Sensor.h"
 #include "Arduino.h"
 
+
 char estado = 0;
-Sensor s1(pS1, 55);
+Sensor s1(A1, 55);
 
  
 void setup() {

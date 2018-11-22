@@ -4,9 +4,12 @@
 #define pS4 A4
 #define pS5 A5
 #include "Sensor.h"
+#include "Arduino.h"
 
 char estado = 0;
-Sensor s1(A1, 55); 
+Sensor s1(pS1, 55);
+
+ 
 void setup() {
   // put your setup code here, to run once:
   //Sensores
@@ -16,4 +19,5 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   s1.sreload();
+  //mudei alguma coisa
 }

@@ -16,6 +16,6 @@ public:
   void reload();
   bool sreload();
   bool state();
-  virtual ~Sensor ();
+  ~Sensor ();
 };
 #endif

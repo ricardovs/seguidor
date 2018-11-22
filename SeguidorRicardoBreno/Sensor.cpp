@@ -7,6 +7,35 @@ Sensor::Sensor (int pin, int max){
     _pin = pin;
     _max = max;
     _value = 0;
+    for(int i= 0; i < 5; i++){
+     _lastvalue[i] = 0;
+    }
+}
+
+
+void Sensor::addToLast(int value){
+  if(_plast < 5){
+     _plast++; 
+  }else{
+    _plast=0;
+  }
+  _lastvalue[_plast] = value;
+}
+
+
+float Sensor::meanlast()
+{
+  float mean =0;
+  for(int i= 0; i < 5; i++){
+     mean += _lastvalue[i];
+  }
+  return (mean*0.2);
+}
+
+void Sensor::setLast(int value){
+  for(int i= 0; i < 5; i++){
+     _lastvalue[i] = value;
+  }
 }
 
 Sensor::~Sensor () {
@@ -19,6 +48,7 @@ const int Sensor::value(){
 }
 
 void Sensor::reload() {
+  this->addToLast(_value);
   _value = analogRead(_pin);
 }
 
@@ -29,7 +59,7 @@ bool Sensor::sreload() {
 
 
 const bool Sensor::state(){
-  return (_value >= _max);
+  return (_value >= this->meanlast());
 }
 
 void Sensor::printValue() {

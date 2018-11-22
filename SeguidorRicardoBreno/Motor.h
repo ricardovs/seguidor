@@ -9,7 +9,10 @@ class Motor{
 		const int _pinE;
 		const int _pinP;
 	public:
-		Motor(int pinV, int pinE, int pinP );
-		void anda(int vD, int vE);
+		Motor(const int pinV,const int pinE,const int pinP );
+		const void frente(int velocidade);
+    const void atras(int velocidade);
+    const void anda(int velocidade);
+    const void freia();
 };
 #endif

@@ -19,22 +19,11 @@ void setup() {
 }
 
 void loop() {
-  //Recarrega todos os sensores e imprime seus status na tela
-  Serial.println("-----------------");
-  s1.reload();
-  s1.printState();
-
-  s2.reload();
-  s2.printState();
-  
-  s3.reload();
-  s3.printState();
-  
-  s4.reload();
-  s4.printState();
-  
-  s5.reload();
-  s5.printState();
+  for(int i = -244; i < 244; i+=50){
+    m_d.anda(i);
+    Serial.println(i);
+   
+  }
   
   delay(800);
 }

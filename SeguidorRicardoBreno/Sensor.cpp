@@ -37,3 +37,12 @@ void Sensor::printValue() {
   Serial.println(this -> _value);
   Serial.println();
 }
+
+void Sensor::printState() {
+  Serial.print(_pin);
+  Serial.print("Sensor ");
+  Serial.print(_pin);
+  Serial.print(" = ");
+  Serial.println(state());
+  Serial.println();
+}

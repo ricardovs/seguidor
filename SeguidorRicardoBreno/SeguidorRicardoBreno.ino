@@ -2,8 +2,8 @@
 
 char estado = 0;
 Sensor s1(A1, 500); 
-Sensor s2(A2, 500); 
-Sensor s3(A3, 500); 
+Sensor s2(A2, 400); 
+Sensor s3(A3, 400); 
 Sensor s4(A4, 500); 
 Sensor s5(A5, 500); 
 
@@ -14,22 +14,22 @@ void setup() {
 }
 
 void loop() {
-  //Recarrega todos os sensores e imprime seus valores na tela
+  //Recarrega todos os sensores e imprime seus status na tela
   Serial.println("-----------------");
   s1.reload();
-  s1.printValue();
+  s1.printState();
 
   s2.reload();
-  s2.printValue();
+  s2.printState();
   
   s3.reload();
-  s3.printValue();
+  s3.printState();
   
   s4.reload();
-  s4.printValue();
+  s4.printState();
   
   s5.reload();
-  s5.printValue();
+  s5.printState();
   
   delay(800);
 }

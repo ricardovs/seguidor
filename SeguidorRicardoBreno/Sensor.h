@@ -18,5 +18,6 @@ public:
   bool state();
   ~Sensor ();
   void printValue();
+  void printState();
 };
 #endif

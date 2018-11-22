@@ -1,4 +1,5 @@
 #include "Sensor.h"
+#include "Motor.h"
 #include "Arduino.h"
 
 
@@ -8,6 +9,8 @@ Sensor s2(A2, 400);
 Sensor s3(A3, 400); 
 Sensor s4(A4, 500); 
 Sensor s5(A5, 500); 
+
+Motor m_d(5,7,6);
 
 void setup() {
   // put your setup code here, to run once:

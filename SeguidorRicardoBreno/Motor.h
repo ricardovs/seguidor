@@ -1,5 +1,5 @@
-#ifndef Sensor_h
-#define Sensor_h
+#ifndef Motor_h
+#define Motor_h
 
 #include "Arduino.h"
 

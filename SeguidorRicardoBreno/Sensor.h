@@ -12,12 +12,12 @@ private:
 
 public:
   Sensor (int pin, int max);
-  int value();
+  const int value();
   void reload();
   bool sreload();
-  bool state();
-  ~Sensor ();
+  const bool state();
   void printValue();
   void printState();
+  ~Sensor ();
 };
 #endif

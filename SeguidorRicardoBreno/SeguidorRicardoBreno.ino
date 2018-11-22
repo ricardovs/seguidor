@@ -1,4 +1,6 @@
 #include "Sensor.h"
+#include "Arduino.h"
+
 
 char estado = 0;
 Sensor s1(A1, 500); 
